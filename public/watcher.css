@@ -1,0 +1,116 @@
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; } body { line-height:1; } article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { display:block; } nav ul { list-style:none; } blockquote, q { quotes:none; } blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; } a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; } ins { background-color:#ff9; color:#000; text-decoration:none; } mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; } del { text-decoration: line-through; } abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; } table { border-collapse:collapse; border-spacing:0; } hr { display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1em 0; padding:0; } input, select { vertical-align:middle; } 
+
+/* Resizng Fonts */
+html { font-size: 16px; }
+@media screen and (max-width:850px) { html { font-size: 14px; } }
+@media screen and (max-width:650px) { html { font-size: 12px; } }
+
+body {
+	font-family: Lato, 'Helvetica Neue', 'Lucida Grande', Helvetica, 'Ludica Sans', Arial, sans-serif;
+	font-weight: 300;
+	color:#777;
+}
+
+a {
+	text-decoration:none;
+	color:#39C;
+}
+.more-info {
+	margin-left:0.5em;
+	font-size:0.75em;
+}
+.more-info.viewing .no { display:none; }
+.more-info .yes { display:none; }
+.more-info.viewing .yes { display:inline; }
+
+#wrapper {
+	margin:0 auto;
+	max-width:1000px;
+}
+
+.info {
+	padding:20px;
+	border-top:1px dotted #eee;
+	font-size:14px;
+	line-height:1.5em;
+	display:none;
+	position:relative;
+}
+.info-wrapper { max-width:600px; }
+.info-links {
+	text-align:center;
+}
+@media screen and (min-width:650px) {
+	.info-links {
+		position:absolute;
+		right:20px; top:20px;
+	}
+}
+.info p, .info ul, .info ol {
+	margin-bottom:1em;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold; color:#393939;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+}
+h2 { font-size:1.35em; }
+h3 { font-size:1.25em; }
+h4 { font-size:1.15em; }
+h5 { font-size:1.05em; }
+
+code, pre {
+	font-family:Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, mono;
+	font-size:12px;
+	color:#333;
+}
+pre {
+	padding:8px 15px;
+	background:#F8F8F8;
+	border-radius:5px;
+	border:1px solid #e5e5e5;
+	overflow-x:auto;
+	margin-bottom:1em;
+}
+
+.jog-title    { padding:20px; position:relative; }
+
+.jog-title hgroup,
+.jog-title dt { font-size:1.5em; padding:0; line-height:1em; font-weight:bold; color:#222; }
+
+.jog-title h1 { display:inline; }
+.jog-title .fork-button { position:relative; left:10px; top:3px; }
+
+.jog-title p,
+.jog-title dd { padding-top:0.5em; }
+.jog-title dl {
+	position:absolute;
+	right:0; top:0;
+	text-align: right;
+	padding:20px;
+}
+
+.jog-entry      {
+	display:block; position:relative;
+	margin:0 20px 15px 20px;
+	padding-top:15px;
+	border-top:1px dotted #eee;
+}
+.jog-entry .row        { display:table; width:100%; font-size: 100%; }
+.jog-entry .item       { display:table-cell; line-height:1.35em; }
+
+.jog-entry.level-error .item.level { color:#d53; }
+.jog-entry.level-warn  .item.level { color:#C83; }
+.jog-entry.level-debug .item.level { color:#ccc; }
+
+.jog-entry .item.time  { width:20%; padding-left:2%; text-align:right; }
+.jog-entry .item.msg   { width:65%; white-space:pre-wrap; }
+.jog-entry .item.level { width:10%; font-weight:400; }

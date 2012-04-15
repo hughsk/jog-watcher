@@ -1,0 +1,9 @@
+{{#each queue}}
+	<div class="jog-entry level-{{level}}">
+		<div class="row">
+			<p class="item level">{{level}}</p>
+			<p class="item msg">{{msg}}</p>
+			<time class="item time" datetime="{{isotime timestamp}}">{{timestamp}}</time>
+		</div>
+	</div>
+{{/each}}

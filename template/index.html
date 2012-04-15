@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jog Watcher</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='watcher.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="wrapper">
+	<div class="jog-title">
+		<hgroup>
+			<h1>Jog Watcher</h1>
+  		</hgroup>
+		<p>
+			Live web feed of your logs from Jog.
+			<a href="http://github.com/hughsk/jog-watcher#readme" title="More Info" class="more-info">
+				<span class="no">More info</span>
+				<span class="yes">Close info</span>
+			</a>
+		</p>
+		<dl>
+			<dt data-jogger-total="{{ total }}">{{ total }}</dt>
+			<dd>Logs Recorded</dd>
+		</dl>
+	</div>
+	<article role="main" class="info">
+		<p class="info-links">
+			<iframe class="fork-button" src="http://markdotto.github.com/github-buttons/github-btn.html?user=hughsk&repo=jog-watcher&type=fork"
+  allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+			<iframe class="fork-button" src="http://markdotto.github.com/github-buttons/github-btn.html?user=hughsk&repo=jog-watcher&type=watch"
+  allowtransparency="true" frameborder="0" scrolling="0" width="63px" height="20px"></iframe>
+		</p>
+		<div class="info-wrapper">
+			{{ html readme }}
+		</div>
+	</article>
+	<div class="jog-wrapper" data-jogger="{{limit}}">
+		{{> body}}
+	</div>
+</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+	<script id="body-template" type="text/x-handlebars-template">{{ html bodyTemplate }}</script>
+	<script type="text/javascript" src="timeago.min.js"></script>
+	<script type="text/javascript" src="handlebars.min.js"></script>
+	<script type="text/javascript" src="socket.io/socket.io.js"></script>
+	
+	<script type="text/javascript" src="watcher.js"></script>
+</body>
+</html>
